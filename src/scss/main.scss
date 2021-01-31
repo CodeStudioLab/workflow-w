@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+$font: 'Open Sans', sans-serif;
+// Media Query Mixin
+@mixin breakpoint ($breakpoint){
+  @media screen and (min-width: $breakpoint){
+    @content;
+  }
+}
+
+//  Colors
+$blue: #0274B8;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-image: url('../img/bg-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0,0.9);
+   
+    
+  }
+  .content{
+    position: relative;
+    z-index: 1;
+    h1 {
+      color:  #cf1b1b;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 10px;
+      span {
+        font-weight: 600;
+        color: #fff;
+      }
+      @include breakpoint(480px){
+        font-size: 36px;
+      }
+      @include breakpoint(768px){
+        font-size: 42px;
+      }
+      @include breakpoint(1024px){
+        font-size: 56px;
+      }
+    }
+    h2 {
+      color: #fff;
+	  font-size: 42px;
+	  text-transform: uppercase;
+      font-weight: 800;
+      margin: 2px 0;
+
+      @include breakpoint(480px){
+        font-size: 56px;
+      }
+      @include breakpoint(768px){
+        font-size: 65px;
+      }
+      @include breakpoint(1024px){
+        font-size: 70px;
+      }
+      @include breakpoint(1280px){
+        font-size: 80px;
+      }
+    }
+
+    h3{
+      color: $blue;
+      font-size: 44px;
+	  font-weight: 600;
+	  text-transform: uppercase;
+      letter-spacing: 8px;
+      @include breakpoint(320px){
+        font-size: 30px;
+      }
+      @include breakpoint(480px){
+        font-size: 36px;
+      }
+      @include breakpoint(768px){
+        font-size: 40px;
+      }
+      @include breakpoint(1024px){
+        font-size: 44px;
+      }
+      @include breakpoint(1280px){
+        font-size: 20px;
+      }
+    }
+    .countdown {
+      color: #fff;
+      font-size: 36px;
+      font-weight: 500;
+      @include breakpoint(480px){
+        font-size: 38px;
+      }
+
+      @include breakpoint(768px){
+        font-size: 45px;
+      }
+      @include breakpoint(1024px){
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:768px){
+  header{
+    background-image: url('../img/bg-mobil.jpg');
+  }
+}
