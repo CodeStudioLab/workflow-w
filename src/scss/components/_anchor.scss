@@ -1,0 +1,95 @@
+#scroll-down-animation {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	z-index: 2;
+	transform: translate(-50%,-50%);
+	@include respond-to("small-mx"){
+		top: 85%;
+	}
+	h2 
+	{
+		color: $blue-navy;
+		font-family: $font-regular;
+		font-weight: 200;
+		font-size: 16px;
+	}	  
+	.mouse {
+		margin: 0 auto;
+		display: block;
+		border-radius: 50px;
+		border: 2px solid $blue-navy;
+		height: 37px;
+		width: 20px;
+		position: relative;
+		@include respond-to("small-mx"){
+			height: 27px;
+			width: 17px;
+		}
+	}
+	  
+	.move {
+		position: absolute;
+		background-color: $blue-navy;
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		//animation: move 2s linear infinite;
+	}
+
+	.box span {
+		position: absolute;
+		top: 85%;
+		left: 50%;
+		width: 20px;
+		height: 20px;
+		z-index: 2;
+	  	display: block;
+		border-right: 2px solid $blue-navy;
+		border-bottom: 2px solid $blue-navy;
+		transform: rotate(45deg);
+		margin-top: 3px;
+		margin: -10px;
+		animation: animate 2s infinite;
+	}
+	
+	.box span:nth-child(2) {
+		animation-delay: -0.2s;
+		margin-top: 3px;
+	}
+	
+	.box span:nth-child(3) {
+		animation-delay: -0.4s;
+		margin-top: 3px;
+	}
+
+  }
+  
+  @keyframes move {
+	0% {
+	  transform: translate(-50%,10px);
+	  opacity: 0;
+	}
+	50% {
+	  transform: translate(-50%,40px);
+	  opacity: 1;
+	}
+	100% {
+	  transform: translate(-50%,80px);
+	  opacity: 0;
+	}
+  }
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}

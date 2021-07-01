@@ -1,0 +1,9 @@
+@mixin weights ($weights...){
+	@if length($weights) > 1{
+		@for $i from 1 through length($weights){
+			.weight-#{nth($weights, $i)}{
+				font-weight: map-get($font-weight, nth($weights, $i));
+			}
+		}
+	}
+}

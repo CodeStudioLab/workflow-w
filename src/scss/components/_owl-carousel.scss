@@ -1,0 +1,62 @@
+@import '../owlCarousel/core';
+@import '../owlCarousel/animate';
+@import '../owlCarousel/autoheight';
+@import '../owlCarousel/lazyload';
+@import '../owlCarousel/video';
+@import '../owlCarousel/theme.default'; 
+// @import 'owlCarousel/theme.green'; 
+
+
+.slide-principal{
+	position: relative;
+	.item{
+		.text{
+			padding: 0 55px;
+			position: absolute;
+			top: 40%;
+			width: 100%;
+			&-title{
+				font-family: $font-bold;
+			}	
+			&-p{
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+	background-color: #008ACC !important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+	width:15px !important;
+	height: 15px !important;
+	margin: 5px 5px !important;
+	background: rgba(255,255,255,0.2);
+	display: block;
+	-webkit-backface-visibility: visible;
+	transition: opacity .2s ease;
+	border-radius: 3px !important;
+	border: 2px solid #008ACC !important;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+	position: absolute !important;
+	right: 0 !important;
+	width: 40% !important;
+	text-align: left !important;
+	padding: 0 0 0 37px !important;
+	bottom: 24px !important;
+	z-index: 3 !important;
+	left: 0 !important;
+	margin: 0 !important;
+	@include respond-to ("small-mx"){
+		padding: 0 0 0 13px !important;
+    	bottom: 6px !important;
+	}
+}

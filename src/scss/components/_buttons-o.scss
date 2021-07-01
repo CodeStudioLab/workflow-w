@@ -1,0 +1,85 @@
+// Buttons Outline
+@mixin buttons-ol($colors...) {
+    @if $button {
+        .button {
+            font:{
+                family: $font-regular;
+                size: 16px;
+                weight: 300;
+            }
+			text-align: center;
+            display: inline-block;
+            outline: none;
+            border-radius: $rounded;
+            padding: 10px 25px;
+            transition: .7s;
+            text-decoration: none;
+			cursor: pointer;
+            a{
+                text-decoration: none;
+            }
+            i{
+                margin-right: 5px;
+            }
+            // Button Defaul
+            &-default-o{
+                background: transparent;
+                color: map-get($button-colors,nth($colors, 1));
+                border: 2px solid map-get($button-colors,nth($colors, 1));
+                transition: .7s;
+                &:hover{
+                    background: transparent;
+                    border: 2px solid lighten(map-get($button-colors,nth($colors, 1)),20%);
+                    transition: .7s;
+                    color: $white;
+                }
+                &:focus {
+                    outline: 0;
+                    box-shadow: 0 0 0 0.2rem rgba(map-get($button-colors,nth($colors, 1)),.25);
+                    transition: .7s;
+                }
+            }
+
+            @if length($colors) > 1{
+                @for $i from 2 through length($colors){
+                    &-#{nth($colors, $i)}#{-o}{
+                        @if map-get($button-colors, nth($colors, $i)) ==$primary {
+                            // color: $blue;
+                            color: $white;
+                        }@else{
+                            // color: map-get($button-colors,nth($colors, $i));
+                            color: $white;
+                        }
+                        @if map-get($button-colors,nth($colors,$i)) ==$white { 
+                            color: $white;
+                        }
+                        background: transparent;
+                        border: 2px solid map-get($button-colors,nth($colors, $i));
+                        transition: .7s;
+                        &:hover {
+                            background-color: darken(map-get($button-colors,nth($colors, $i)),2%);
+                            transition: .7s;
+                             @if map-get($button-colors, nth($colors, $i)) == $white {
+                                color: $blue;
+                            }@else{
+                                color: $white;
+                            }
+                        }
+                        &:focus{
+                            outline: 0;
+                            box-shadow: 0 0 0 0.2rem rgba(map-get($button-colors,nth($colors, $i)),.25);
+                            transition: .7s;
+                        }
+                    }
+                }
+            }
+
+        } //fin Button
+    }
+    // Modificadores
+    .b-full{
+        display: block;
+        width: 100%;
+    }
+	
+}

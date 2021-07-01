@@ -1,0 +1,182 @@
+.title_principal{
+	margin: 40px 0;
+
+	&-headline{
+		margin-top: 50px;
+		text-align: center;
+		font: normal normal bold 30px/36px Gelion;
+		letter-spacing: 0px;
+		color: $deep-blue;
+		opacity: 1;
+	}
+	p{
+		text-align: center;
+		letter-spacing: 0px;
+		font-size: 20px;
+		color: #606060;
+		opacity: 1;
+
+	}
+
+}
+
+.iconos-actualidad-home {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto 90px auto;
+    padding: 0;
+    overflow-x: initial;
+
+    .contenedor-items-home {
+        max-width: 1000px;
+        margin: 40px auto;
+        display: block;
+        
+        .iconos-items-home {
+            width: calc(20% - 4px);
+            display: inline-block;
+
+			a{
+				text-decoration: none;
+			}
+
+            img {
+                width: 100%;
+                display: block;
+                margin: auto;
+                max-width: 90px;
+            }
+
+            .titulo-item{
+                font-size: 16px;
+                color: #606060;
+                text-align: center;
+                font-family: "Gelion-regular", sans-serif;
+                font-weight: normal;
+
+                b {
+                    font-family: "Gelion-bold", sans-serif;
+                    font-weight: normal;
+					color: $blue;
+                }
+            }
+        }
+    }
+
+    .controladores-movil {
+        display: none;
+    }
+}
+@include respond-to ("small-mx"){
+	.iconos-actualidad-home {
+        width: 100%;
+        position: relative;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    
+        .contenedor-items-home {
+            max-width: 1200px;
+            width: 100%;
+            height: 180px;
+            display: block;
+            margin: auto;
+    
+            .iconos-items-home {
+                width: 180px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%) scale(0.3);
+                transition: all 1s ease;
+                opacity: 0;
+                text-align: center;
+    
+                &.next {
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-135%) scale(0.8);
+                    opacity: 0.6;
+                }
+    
+                &.prev {
+                    left: 50%;
+                    transform: translateY(-50%) translateX(35%) scale(0.8);
+                    opacity: 0.6;
+                }
+    
+                &.now {
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%) scale(1);
+                    opacity: 1;
+                    z-index: 2;
+                }
+            }
+        }
+    
+        .controladores-movil {
+            max-width: 1200px;
+            width: 100%;
+            display: block;
+            margin: auto;
+    
+            .controladores-dots-iconos {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+    
+                .dot-iconos-home {
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid #0082CA;
+                    margin: 0 3px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    box-sizing: border-box;
+    
+                    &:hover {
+                        background: #0082CA;
+                    }
+    
+                    &.active {
+                        background: #0082CA;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+    
+            .contenedor-flechas {
+                width: 200px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%);
+                z-index: 10;
+    
+                .controlador-flechas {
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    cursor: pointer;
+                    z-index: 5;
+        
+                    &.flechas-iconos-izquierda {
+                        left: 0;
+                    }
+        
+                    &.flechas-iconos-derecha {
+                        right: 0;
+                    }
+        
+                    img {
+                        height: 30px;
+                        left: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

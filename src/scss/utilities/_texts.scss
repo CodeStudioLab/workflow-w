@@ -1,0 +1,18 @@
+$size-text: (25px, 20px, 18px, 16px);
+
+@for $i from 1 through 4 {
+
+    .text-#{$i}{
+        font:{
+            family: $font-regular;
+            size: nth($size-text, $i);
+        }
+        line-height: 27px;
+    }
+
+}
+
+
+
+
+

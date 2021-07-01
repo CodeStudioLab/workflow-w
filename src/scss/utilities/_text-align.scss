@@ -1,0 +1,9 @@
+@mixin text-align ($align...){
+	@if length($align) > 1{
+		@for $i from 1 through length($align){
+			.text-#{nth($align, $i)}{
+				text-align: map-get($text-align, nth($align, $i));
+			}
+		}
+	}
+}

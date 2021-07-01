@@ -1,0 +1,27 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-regular;
+	background: $white;
+    // padding-top: 150px;
+}
+
+header {
+    // height: 150px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+body.darkMode {
+	background: $dark;
+	section{
+		h2,p {
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.indicadores{
+	width: 100%;
+    margin: auto;
+	height: auto;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 10px 0;
+	background: $ligth-blue 0% 0% no-repeat padding-box;
+    @include respond-to("small-mx"){
+		height: auto;
+		padding: 20px 0;		
+	}
+	@include respond-to ("medium-mx"){
+		height: auto;
+		flex-direction: column;
+	}
+	.indicador{
+		margin: 0 20px;
+		@include respond-to("small-mx"){
+			width: 300px;
+			text-align: center;
+			margin: 10px auto;
+		}
+		@include respond-to ("medium-mx"){
+			text-align: center;
+		}
+		p{
+			color: $blue-navy;
+			@include respond-to("small-mx"){
+				padding-left: 23px;
+				text-align: center;
+			}
+		}
+		i{
+			font-size: 20px;
+			
+		}
+		span{
+			color:$blue;
+			font: normal normal bold 17px/23px Gelion;
+			@include respond-to("small-mx"){	
+				width: 35px;		
+			}
+		}
+		&-button{
+			margin: 0;
+			@include respond-to("small-mx"){
+				margin: 10px 0;
+			}
+			@include respond-to ("medium-mx"){
+				margin: 10px auto;
+				width: 237px;
+				
+			}
+		}
+	}
+}

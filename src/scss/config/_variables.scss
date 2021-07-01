@@ -1,0 +1,127 @@
+
+	
+
+//Colors
+$primary: $blue !default;
+
+// Transiciones
+$trans-lg: .5s;
+$trans-md: .3s;
+
+// Border redius
+$rounded: 4px;
+$rounded-md: 15px;
+$rounded-mx: 50px;
+$circle: 50%;
+
+// Transitions
+$tra-mx: .5s;
+$tra-md: .3s;
+$tra-mn: .1s;
+
+
+// Limit
+$limit: 6;
+$unit: 1rem;
+$px: 1rem ;
+
+// Map
+$button    : true !default;
+
+$bg-colors: (
+	'blue'     : $blue,
+	'blue-dark': $blue-dark,
+	'blue-2'   : darken($blue, 12%),
+	'white'    : $white,
+	'gray'     : darken($gray,10%),
+	'black'    : $black,
+	'dark'     : $dark,
+);
+
+$text-colors: (
+	'blue': $blue,
+	'blue-dark': $blue-dark,
+	'blue-2': darken($blue, 12%),
+	'white': $white,
+	'gray': darken($gray,10%),
+	'green': $green,
+	'aqua': $aqua,
+	'red': $red,
+
+);
+
+$text-align: (
+	'left'   : left,
+	'right'  : right,
+	'justify': justify,
+	'center' : center,
+);
+
+$font-weight: (
+	'100': 100,
+	'200': 200,
+	'300': 300,
+	'400': 400,
+	'500': 500,
+	'600': 600,
+	'700': 700,
+	'800': 800,
+);
+
+
+$button-colors: (
+	'default' :lighten($black,60%),
+	'primary' :$primary,
+  	'white'   : $white,
+	'warning' : $yellow,
+);
+
+// Breakpoints Media Query
+$breakpoints: (
+  'mobil-mn'   : ( min-width:  480px ),
+  'small-mn'   : ( min-width:  767px ),
+  'medium-mn'  : ( min-width:  992px ),
+  'large-mn'   : ( min-width: 1200px ),
+  'mobil-mx'   : ( max-width:  480px ),
+  'small-mx'   : ( max-width:  767px ),
+  'medium-mx'  : ( max-width:  992px ),
+  'large-mx'   : ( max-width: 1200px )
+) !default;
+
+
+// Ruta de Icons
+$icons-eot: "/wps/wcm/connect/banco-de-occidente/a69d4a1a-30dd-4e50-b993-70dd4be30ddd/icons.eot?MOD=AJPERES";
+$icons-eot-2: "/wps/wcm/connect/banco-de-occidente/a69d4a1a-30dd-4e50-b993-70dd4be30ddd/icons.eot?MOD=AJPERES";
+$icons-ttf: "/wps/wcm/connect/banco-de-occidente/dce27d0b-db0b-494e-9269-7fb808d950cb/icons.ttf?MOD=AJPERES";
+$icons-woff:"/wps/wcm/connect/banco-de-occidente/c77f5cd7-0093-4cf7-8033-6fc375ce09c8/icons.woff?MOD=AJPERES";
+$icons-svg: "/wps/wcm/connect/banco-de-occidente/af6d6d98-f070-46d3-aa47-6badacc34cf3/icons.svg?MOD=AJPERES";
+
+
+/* ----------------------------------
+ 		!Variables de Grid System
+------------------------------------ */
+/*------------------------------------*\
+* CONTAINER
+\*------------------------------------*/
+$container-max-width: 90%;
+$gutter: 1rem;
+
+/*------------------------------------*\
+* COLUMNS
+\*------------------------------------*/
+$columns-number: 12;
+
+/*------------------------------------*\
+* BREAKPOINTS
+\*------------------------------------*/
+// Small devices (landscape phones, etc)
+$screen-xs-max: 768px;
+
+// Medium devices (tablets, 769px and up)
+$screen-sm-min: 769px;
+
+// Large devices (desktops, 992px and up)
+$screen-md-min: 992px;
+
+// Extra large devices (large desktops, 1200px and up)
+$screen-lg-min: 1200px;

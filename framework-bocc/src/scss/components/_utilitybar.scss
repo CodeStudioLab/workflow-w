@@ -1,0 +1,79 @@
+.bdo_utilitybar {
+    display: flex;
+    font-family: $font-regular;
+    background: $white;
+   
+    &_access{
+        display: flex;
+    }
+    i{
+        border: 1px solid $gray;
+        width: 28px;
+        height: 28px;
+        line-height: 20px;
+        font-size: 18px;
+        text-align: center;
+        padding: 3px;
+        border-radius: $rounded;
+        color: $blue;
+    }
+    &_group{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .icon-access{
+        padding: 3px;
+        width: 28px;
+        height: 28px;
+        border: 1px solid $gray;
+        border-radius: $rounded;
+        opacity: 1;
+    }
+  
+    .bdo_utilitybar_item{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        font-family: $font-regular;
+        padding: 5px;
+		color: $gray;
+        &-active{
+            background: $gray;
+            @include respond-to('small-mx'){
+                background: transparent;
+            }
+        }
+        img{
+            display: flex;
+        }
+        a{
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            font-size: 16px;
+            padding: 0 5px;
+			color: darken($gray,50%);
+            @include respond-to('small-mx'){
+                padding: 0;
+            }
+            font-family: $font-regular;
+            p{
+                margin-left: 10px;
+                @include respond-to('medium-mx'){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+/*
+	! NOTA: uso exclusivo del bdo_Utilitybar y bdo_navbar
+*/
+.content-header{
+    display: flex;
+	align-items: center;
+	width: 100%;
+	margin-left: 5%;
+	margin-right: 5%;
+}

@@ -1,0 +1,60 @@
+
+@for $i from 1 through $limit{
+    .p-#{$i}{
+        padding: $i * $unit;
+    }
+
+    .py-#{$i}{
+        padding: $i * $unit 0;
+    }
+
+	.px-#{$i}{
+        padding: 0 $i * $unit;
+    }
+
+    .pt-#{$i}{
+        padding:  $i * $unit 0 0 0;
+    }
+	
+	.pr-#{$i}{
+		padding:   0 $i * $unit 0 0;
+	}
+
+	.pb-#{$i}{
+        padding:  0 0 $i * $unit 0;
+    }
+
+	.pl-#{$i}{
+        padding:  0 0 0 $i * $unit;
+    }
+
+	.m-#{$i}{
+        margin:  $i * $unit;
+    }
+
+	.my-#{$i}{
+        margin:  $i * $unit 0;
+    }
+
+    .mx-#{$i}{
+        margin: 0 $i * $unit;
+    }
+
+    .mt-#{$i}{
+        margin:  $i * $unit 0  0 0;
+    }
+
+	.mr-#{$i}{
+        margin:   0 $i * $unit 0 0;
+    }
+
+	.mb-#{$i}{
+        margin:   0 0 $i * $unit 0;
+    }
+
+	.ml-#{$i}{
+        margin:   0 0 0 $i * $unit;
+    }
+
+
+}

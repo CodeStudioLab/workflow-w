@@ -1,0 +1,128 @@
+//fonts
+$font-thin: "Gelion-thin",
+sans-serif;
+$font-thin-it: "Gelion-thin-italic",
+sans-serif;
+$font-light: "Gelion-light",
+sans-serif;
+$font-light-it: "Gelion-light-italic",
+sans-serif;
+$font-regular: "Gelion-regular",
+sans-serif;
+$font-regular-it: "Gelion-regular-italic",
+sans-serif;
+$font-medium: "Gelion-medium",
+sans-serif;
+$font-medium-it: "Gelion-medium-italic",
+sans-serif;
+$font-semibold: "Gelion-semibold",
+sans-serif;
+$font-semibold-it: "Gelion-semibold-italic",
+sans-serif;
+$font-bold: "Gelion-bold",
+sans-serif;
+$font-bold-it: "Gelion-bold-italic",
+sans-serif;
+$font-black: "Gelion-black",
+sans-serif;
+$font-black-it: "Gelion-black-italic",
+sans-serif;
+
+
+@font-face {
+  font-family: 'Gelion-thin';
+  src: url('../fonts/GelionThin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-thin-italic';
+  src: url('../fonts/GelionThinItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-light';
+  src: url('../fonts/GelionLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-light-italic';
+  src: url('../fonts/GelionLightItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-regular';
+  src: url('../fonts/GelionRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-regular-italic';
+  src: url('../fonts/GelionRegularItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-medium';
+  src: url('../fonts/GelionMedium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-medium-italic';
+  src: url('../fonts/GelionMediumItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-semibold';
+  src: url('../fonts/GelionSemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-semibold-italic';
+  src: url('../fonts/GelionSemiBoldItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-bold';
+  src: url('../fonts/GelionBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-bold-italic';
+  src: url('../fonts/GelionBoldItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-black';
+  src: url('../fonts/GelionBlack.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gelion-black-italic';
+  src: url('../fonts/GelionBlackItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

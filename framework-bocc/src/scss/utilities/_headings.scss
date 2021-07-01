@@ -1,0 +1,16 @@
+$font-sizes: (50px ,40px, 30px, 25px, 18px, 16px );
+
+@for $i from 1 through 6 {
+
+    .h-#{$i}{
+        font:{
+            family: $font-regular;
+            size: nth($font-sizes, $i);
+            weight: 700;
+        }
+    }
+
+}
+
+
+

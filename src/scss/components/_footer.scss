@@ -1,0 +1,88 @@
+.footer{
+	background: transparent linear-gradient(270deg, #022F58 0%, #0565A1 100%) 0% 0% no-repeat padding-box;
+	padding-bottom: 70px;
+
+	&-logos{
+		
+		display: flex;
+		justify-content: space-around;
+		@include respond-to("small-mx"){
+			flex-wrap: wrap;
+			
+		}
+		@include respond-to("medium-mn"){
+			margin: 0 20px;
+		}
+		a{
+			img{
+				margin: 10px 5px;
+			}
+		}
+
+	}
+	.collapsible {
+		background: transparent;
+		color: white;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		outline: none;
+		font-size: 18px;
+        font-weight: normal;
+		font-family: $font-regular;
+		i{
+			padding-left: 15px;
+			font-size: 13px;
+		}
+	  }
+	  .content {
+		padding: 0 18px;
+		max-height: 0;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+		@include respond-to("small-mx"){
+			flex-wrap: wrap;
+			margin-right: 15px;
+				
+		}
+
+		.title-footer{
+			position: relative;
+			margin: 10px 0;
+			color: $white;
+			font-size: 18px;
+        	font-weight: normal;
+			font-family: $font-regular;
+			
+			&::after{
+				content: ' ';
+				position: absolute;
+				display: block;
+				top: 15px;
+				bottom: 0;
+				margin: 10px auto;
+				width: 13%;
+				height: 3px;
+				background:$blue;
+				
+			}
+		}
+		.link-quick{
+			list-style: none;
+			li{
+				margin: 5px 0;
+			}
+		}
+		a{
+			text-decoration: none;
+			color: $white;
+			font-size: 14px;
+            font-weight: normal;
+			font-family: $font-regular;
+		}
+	}
+}

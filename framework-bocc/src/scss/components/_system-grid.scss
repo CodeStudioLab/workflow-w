@@ -1,0 +1,47 @@
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.no-gutter [class*=col] {
+    padding: 0;
+}
+
+[class*=col].no-gutter {
+    padding: 0;
+}
+
+[class*=col] {
+    padding: ($gutter / 2);
+}
+
+.col {
+    flex-shrink: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+/**
+* EXTRA SMALL (XS)
+*/
+@include gridGenerator($breakpoint: 'xs', $offset: true);
+
+/**
+* SMALL (SM), MEDIUM (MD), LARGE (LG)
+*/
+@include sm {
+    @include gridGenerator($breakpoint: 'sm', $offset: true);
+}
+
+@include md {
+    @include gridGenerator($breakpoint: 'md', $offset: true);
+}
+
+@include lg {
+    @include gridGenerator($breakpoint: 'lg', $offset: true);
+}

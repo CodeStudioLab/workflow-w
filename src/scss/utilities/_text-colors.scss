@@ -1,0 +1,14 @@
+@mixin text-colors ($colors...){
+	@if length($colors) > 1{
+		@for $i from 1 through length($colors){
+			.text-#{nth($colors, $i)}{
+				color: map-get($text-colors, nth($colors, $i));
+			}
+		}
+		
+	} 
+
+}
+
+
+
