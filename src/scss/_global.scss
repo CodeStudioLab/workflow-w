@@ -1,0 +1,178 @@
+:root {
+    --font-size: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-regular;
+    background: $white !important;
+    font-size: calc(var(--font-size) * 1em);
+}
+
+header {
+    // height: 150px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+section.wpthemeControl {
+    overflow: visible !important;
+}
+
+body.darkMode {
+    background: $darker !important;
+		.wpthemeMainContent{
+			background: $darker !important;
+		}
+        // UtilityBar
+        .bdo_utilitybar{
+            .bdo_utilitybar_item{
+                a{
+                   p{
+                       color: darken($gray,50%) !important;
+                       &:hover{
+                           color: $blue !important;
+                       }
+                   }
+                }
+            }
+        }
+        .slide-principal {
+            .item {
+                .degradado {
+                    background: rgba(25, 34, 41, 1);
+                    background: -moz-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #192229 100%);
+                    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(17, 44, 70, 0)), color-stop(16%, rgba(17, 44, 70, 0)), color-stop(100%, #192229));
+                    background: -webkit-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #192229 100%);
+                    background: -o-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #192229 100%);
+                    background: -ms-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #192229 100%);
+                    background: linear-gradient(to bottom, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #192229 100%);
+                }
+                a {
+                    .text {
+						z-index: 4;
+                        &-title {
+                            color: $blue;
+                        }
+                        &-p {
+                            color: $deep-blue;
+                        }
+                    }
+                }
+            }
+        }
+        .scroll-down-animation {
+            h2 {
+                color: $white !important;
+            }
+            .mouse {
+                border: 2px solid $white !important;
+            }
+            .move {
+                background: $white !important;
+            }
+            .box span {
+                border-right: 2px solid $white !important;
+                border-bottom: 2px solid $white !important;
+            }
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $soft-blue !important;
+        }
+        .paragraph,
+        p {
+            color: $white;
+        }
+        img {
+        	filter:grayscale(30%);
+        }
+        .popup-contenido {
+            background: $dark;
+        }
+		.info-popup-small .contenedor-info-popup-small .popups-small{
+            background: $dark;
+        }
+
+        .info-popup-small .contenedor-info-popup-small .popups-small .btn-cerrar-popup-small{
+            p{
+                            
+                color: $white !important;
+                span{
+                    font-family: $font-bold;
+                    margin: 0 5px;
+                    color: $blue;
+                }
+            }
+        }
+		.info-popup-small .contenedor-info-popup-small2 .popups-small2{
+			background: $dark;
+		}
+		.info-popup-small .contenedor-info-popup-small3 .popups-small3{
+			background: $dark;
+		}
+        .card-v {
+            background: $dark;
+        }
+		.link a{
+			color: $white;
+		}
+        .container.indicadores{
+        	// background: $ligth-blue;
+            background: darken($darker, 2%) !important;
+            border: 0;
+            .indicador{
+                p{
+                    color: $white;
+                }
+            }
+        }
+        #logo-prefooter {
+            .cls-6 {
+                fill: #fff !important;
+                stroke: #fff !important;
+            }
+            .cls-3 {
+                fill: #fff !important;
+            }
+        }
+        .alert-w{
+            background: darken($darker, 2%) !important;
+            &-head{
+
+                .close-alert{
+                    p{
+                        
+                        color: $white !important;
+                        span{
+                            font-family: $font-bold;
+                            margin: 0 5px;
+                            color: $blue;
+                            // font-size: 20px;
+                        }
+                    }
+                }
+            }
+            &-body{
+                .alert-title{
+                    
+                }
+                .alert-question{
+                    color: $white !important;
+                }
+            }
+        }
+
+        .movil-menu .menu .dropdown .box .item p {
+            
+            color: #0082CA !important;
+        }
+}

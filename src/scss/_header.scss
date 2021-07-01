@@ -1,0 +1,88 @@
+// @import "normalize";
+@import "variables";
+@import "global";
+
+/************************************************
+                    MIXIN
+************************************************/
+@import "mixin/breakpoints";
+// @import "mixin/grid";
+/************************************************
+                    COMPONENTS
+************************************************/
+
+@import 'components/utilitybar';
+@import 'components/navbar';
+@import 'components/buttons';
+@import 'components/buttons-o';
+@import 'components/buscador';
+@import 'components/ancla';
+// @import 'components/grid-system';
+@import 'components/icons';
+@import 'slider/core';
+@import 'slider/animate';
+@import 'slider/autoheight';
+@import 'slider/lazyload';
+@import 'slider/video';
+@import 'slider/theme.default';
+@import 'components/slide-principal';
+
+/************************************************
+                    UTILITIES
+************************************************/
+@import 'utilities/spacing';
+// @import 'utilities/headings';
+@import 'utilities/text-colors';
+@import 'utilities/text-align';
+// @import 'utilities/weights';
+/************************************************
+                    Gradient
+************************************************/
+
+@include buttons (map-keys($button-colors)...);
+@include buttons-ol (map-keys($button-colors)...);
+@include bg-colors(map-keys($bg-colors)...);
+@include text-colors(map-keys($text-colors)...);
+@include text-align(map-keys($text-align)...);
+// @include weights(map-keys($font-weight)...);
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+// .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+// 	background-color: #008ACC !important;
+// }
+
+// .owl-theme .owl-dots .owl-dot span {
+// 	width:15px !important;
+// 	height: 15px !important;
+// 	margin: 5px 5px !important;
+// 	background: rgba(255,255,255,0.2);
+// 	display: block;
+// 	-webkit-backface-visibility: visible;
+// 	transition: opacity .2s ease;
+// 	border-radius: 3px !important;
+// 	border: 2px solid #008ACC !important;
+// 	-webkit-transform: rotate(45deg);
+// 	-moz-transform: rotate(45deg);
+// 	-ms-transform: rotate(45deg);
+// 	-o-transform: rotate(45deg);
+// 	transform: rotate(45deg);
+// }
+// .owl-theme .owl-nav.disabled+.owl-dots {
+// 	position: absolute !important;
+// 	right: 0 !important;
+// 	width: 40% !important;
+// 	text-align: left !important;
+// 	padding: 0 0 0 37px !important;
+// 	bottom: 24px !important;
+// 	z-index: 3 !important;
+// 	left: 0 !important;
+// 	margin: 0 !important;
+// 	@include respond-to ("small-mx"){
+// 		padding: 0 0 0 13px !important;
+//     	bottom: 6px !important;
+// 	}
+// }

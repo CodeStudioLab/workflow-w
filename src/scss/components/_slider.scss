@@ -1,0 +1,14 @@
+@import 'slider/core';
+@import 'slider/animate';
+@import 'slider/autoheight';
+@import 'slider/lazyload';
+@import 'slider/video';
+@import "slider/theme.default";
+
+.owl-carousel{
+    .item{
+        .text{
+            z-index: 3;
+        }
+    }
+}

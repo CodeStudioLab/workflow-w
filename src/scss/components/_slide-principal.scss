@@ -1,0 +1,39 @@
+.slide-principal {
+    position: relative !important;
+    .item {
+        .text {
+            padding: 0 55px;
+            position: absolute;
+            top: 40%;
+            width: 100%;
+			z-index: 4;
+            &-title {
+                font-family: $font-bold;
+                font-size: 40px;
+            }
+            &-p {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.slide-inferior {
+    position: relative;
+    .item {
+        .text {
+            padding: 10px 55px;
+            position: absolute;
+            top: 16%;
+            width: 100%;
+            &-title {
+                font-family: $font-bold;
+                font-size: 28px;
+            }
+            &-p {
+                font-size: 18px;
+                margin: 15px 0;
+            }
+        }
+    }
+}

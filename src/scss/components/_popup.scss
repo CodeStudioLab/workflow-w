@@ -6,8 +6,11 @@
 	z-index: 10;
 	top: 0;
 	left: 0;
+	
 	.fondo-popup {
 		position: absolute;
+		left: 0;
+		top: 0;
 		background: rgba(0, 0, 0, 0.6);
 		height: 100%;
 		width: 100%;
@@ -17,16 +20,12 @@
 	.contenedor-info-popup {
 		display: block;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
+		bottom: 0;
+		left: 0;
 		width: 100%;
-		max-width: 500px;
-		padding: 0 10px;
 		.popups {
 			background: #fff;
-			border-radius: 10px;
-			padding: 60px 40px 40px 40px;
+			//border-radius: 10px;
 			box-sizing: border-box;
 			position: relative;
 			.btn-cerrar-popup {
@@ -39,15 +38,16 @@
 				text-align: center;
 				color: #112C46;
 				font-weight: 400;
+				padding-top: 20px;
 				img {
 					
 					margin-bottom: 20px;
 				}
 				.titulo-popup {
-					font-size: 1.7rem;
+					font-size: 1.2rem;
 				}
 				.pregunta {
-					font-size: 1.2rem;
+					font-size: 1rem;
 				}
 			
 			}
@@ -55,5 +55,78 @@
 	}
 }
 .info-popup.active {
-	display: block;
+	display: none;
+}
+.info-popup-small{
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	display: none;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	
+	.fondo-popup-small {
+		position: absolute;
+		background: rgba(0, 0, 0, 0.6);
+		height: 100%;
+		width: 100%;
+		display: block;
+		cursor: pointer;
+	}
+	.contenedor-info-popup-small {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 100%;
+		max-width: 500px;
+		padding: 0 10px;
+
+
+		.popups-small {
+			background: #fff;
+			border-radius: 10px;
+			padding: 60px 40px 40px 40px;
+			box-sizing: border-box;
+			position: relative;
+			box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.2);
+
+			.btn-cerrar-popup-small {
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				cursor: pointer;
+           		p{
+                font-family: $font-regular;
+                color: $blue-dark;
+                font-size: 18px;
+                span{
+                    font-family: $font-bold;
+                    margin: 0 5px;
+                    color: $blue;
+                    // font-size: 20px;
+                }
+            }
+			}
+			.popup-contenido-small {
+				text-align: center;
+				color: #112C46;
+				font-weight: 200;
+				img{
+					width: 100%;
+					border: 1px solid #000;
+				}
+				.titulo-popup-small {
+					font-size: 1.3rem;
+				}
+				.pregunta-small {
+					margin: 10px 0;
+					font-size: 1rem;
+					color:$gray-medium;
+				}
+			}
+		}
+	}
 }

@@ -1,23 +1,22 @@
-@import 'config/colors';
-@import 'config/fuentes';
-@import 'config/variables';
-@import 'config/global';
+@import "normalize";
+@import "variables";
+@import "global";
 
 /************************************************
                     MIXIN
 ************************************************/
 @import "mixin/breakpoints";
 @import "mixin/grid";
-
 /************************************************
                     COMPONENTS
 ************************************************/
+
 @import 'components/utilitybar';
 @import 'components/navbar';
 @import 'components/buttons';
 @import 'components/buttons-o';
-@import 'components/system-grid';
-@import 'components/footer';
+@import 'components/grid-system';
+@import 'components/pre-footer';
 @import 'components/footer';
 @import 'components/buscador';
 @import 'components/cards';
@@ -25,21 +24,32 @@
 @import 'components/icons';
 @import 'components/iconoshome';
 @import 'components/popup';
-// @import 'components/owl-carousel';
-@import 'components/anchor';
+@import 'components/alerts';
+@import 'components/ancla';
+@import 'components/figuras';
+@import 'components/redsocial';
+@import 'components/circular';
 
+
+/************************************************
+                    COMPONENTS
+************************************************/
+@import 'slider/core';
+@import 'slider/animate';
+@import 'slider/autoheight';
+@import 'slider/lazyload';
+@import 'slider/video';
+@import 'slider/theme.default';
+@import 'components/slide-principal';
 
 /************************************************
                     UTILITIES
 ************************************************/
+@import 'utilities/spacing';
 @import 'utilities/headings';
-@import 'utilities/texts';
 @import 'utilities/text-colors';
 @import 'utilities/text-align';
 @import 'utilities/weights';
-@import 'utilities/bg-colors';
-@import 'utilities/padding-margin';
-
 /************************************************
                     Gradient
 ************************************************/
@@ -53,11 +63,6 @@
 
 .bg-gradient {
 	background-image: linear-gradient(to bottom right,$blue 50%,$vivid-blue 50%);
-}
-
-.img-respon-to{
-	width: 100%;
-	height: auto;
 }
 
 .i-fluid{
@@ -78,6 +83,34 @@
 	bottom: 0;
 	width: 100%;
 	height: 50%
+}
+.degradado-dark {
+    background: rgba(17, 44, 70, 0);
+    background: -moz-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #112c46 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(17, 44, 70, 0)), color-stop(16%, rgba(17, 44, 70, 0)), color-stop(100%, #112c46));
+    background: -webkit-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #112c46 100%);
+    background: -o-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #112c46 100%);
+    background: -ms-linear-gradient(top, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #112c46 100%);
+    background: linear-gradient(to bottom, rgba(17, 44, 70, 0) 0%, rgba(17, 44, 70, 0) 16%, #112c46 100%);
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+}
+.degradado-dark-vertical {
+	position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: #112c46;
+    background: -moz-linear-gradient(left, #112c46 14%, rgba(17, 44, 70, 0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(14%, #112c46), color-stop(100%, rgba(17, 44, 70, 0)));
+    background: -webkit-linear-gradient(left, #112c46 14%, rgba(17, 44, 70, 0) 100%);
+    background: -o-linear-gradient(left, #112c46 14%, rgba(17, 44, 70, 0) 100%);
+    background: -ms-linear-gradient(left, #112c46 14%, rgba(17, 44, 70, 0) 100%);
+    background: linear-gradient(to right, #112c46 14%, rgba(17, 44, 70, 0) 100%);
 }
 
 .paragraph{
@@ -104,8 +137,53 @@
     align-items: center;
 }
 
-.box{
-	padding: 20px 34px;
-	color: $white;
-	border-radius: $rounded;
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+	background-color: #008ACC !important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+	width:15px !important;
+	height: 15px !important;
+	margin: 5px 5px !important;
+	background: rgba(255,255,255,0.2);
+	display: block;
+	-webkit-backface-visibility: visible;
+	transition: opacity .2s ease;
+	border-radius: 3px !important;
+	border: 2px solid #008ACC !important;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+	position: absolute !important;
+	right: 0 !important;
+	width: 40% !important;
+	text-align: left !important;
+	padding: 0 0 0 37px !important;
+	bottom: 24px !important;
+	z-index: 3 !important;
+	left: 0 !important;
+	margin: 0 !important;
+	@include respond-to ("small-mx"){
+		padding: 0 0 0 13px !important;
+    	bottom: 6px !important;
+	}
+}
+
+.cx-side-button-group .cx-side-button .cx-icon {
+    height: 40px !important;
+    width: 40px !important;
+}
+
+#two{
+	@include respond-to ("small-mx"){
+
+		.owl-dots{
+			display: none;
+		}
+	}
 }

@@ -1,17 +1,15 @@
-.bdo_nav{
+.bdo_nav {
     display: flex;
     height: 80px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(0,130,202,1) 10%, rgba(2,48,90,1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(0, 130, 202, 1) 10%, rgba(2, 48, 90, 1) 100%);
     box-shadow: -3px 0px 5px #00000029;
-
-    @include respond-to('medium-mx'){
-        background: rgb(0,130,202);
-        background: linear-gradient(120deg, rgba(0,130,202,1) 0%, rgba(2,48,90,1) 100%);
+    @include respond-to('medium-mx') {
+        background: rgb(0, 130, 202);
+        background: linear-gradient(120deg, rgba(0, 130, 202, 1) 0%, rgba(2, 48, 90, 1) 100%);
         box-shadow: -3px 0px 5px #00000000;
     }
-
-    &_logo{
+    &_logo {
         position: absolute;
         display: flex;
         align-items: center;
@@ -21,7 +19,7 @@
         color: $blue-dark;
         z-index: 1;
         border: 0!important;
-        &:after{
+        &:after {
             position: absolute;
             content: ' ';
             width: 1px;
@@ -30,87 +28,147 @@
             top: 30%;
             right: 0;
         }
-
-        @include respond-to('large-mx'){
-            p{
+        @include respond-to('large-mx') {
+            p {
                 display: none;
             }
         }
-        .logo-desk{
+        .logo-desk {
             border-image: 0;
             background-repeat: no-repeat;
             padding: 02px;
             position: absolute;
             top: -19px;
-            @include respond-to('medium-mx'){
+            @include respond-to('medium-mx') {
                 display: none;
             }
         }
-
-        .logo-movil{
+        .logo-movil {
             display: none;
             width: 45px;
             height: auto;
             background-repeat: no-repeat;
             margin-right: 10px;
-            @include respond-to('medium-mx'){
+            @include respond-to('medium-mx') {
                 display: block;
             }
         }
     }
-
-    .bdo_shape{
+    .bdo_shape {
         position: relative;
         border: none;
         width: 250px;
         height: auto;
         border-right: 60px solid transparent;
         border-top: 80px solid #fff;
-       @include respond-to('medium-mx'){
-           display: none;
-       }
+        @include respond-to('medium-mx') {
+            display: none;
+        }
     }
-    &_menu{
+    &_menu {
         margin-left: 10px;
-        @include respond-to('medium-mx'){
+        @include respond-to('medium-mx') {
             margin-left: 80px;
         }
         list-style: none;
-        &_item{
+        &_item {
             display: inline-block;
             margin-left: 10px;
         }
-        &_link{
+        &_link {
             text-decoration: none;
-            color:$white !important;
+            cursor: pointer;
+            color: $white !important;
             font-size: 18px;
             font-weight: normal;
-            padding-bottom: 22px;
-            span{
-                @include respond-to('large-mx'){
-                    display: none;
-                }
-            }
+            padding-bottom: 20px;
             &:hover {
                 bottom: 0;
-                border-bottom: 6px solid darken($blue, 10%);
+                border-bottom: 8px solid darken($blue, 10%);
                 color: $white !important;
+                font-weight: 900px;
             }
             &:focus {
                 color: $white !important;
                 font-weight: 300px;
+                font-family: $font-semibold;
             }
             &:active {
                 color: $white !important;
                 font-weight: 300px;
+                font-family: $font-semibold;
+            }
+        }
+        span {
+            color: $white;
+            margin: 0 20px;
+            @include respond-to('small-mx') {
+                margin: 0 5px;
             }
         }
     }
-    &_cta{
+    &_cta {
         margin-left: auto;
-        @include respond-to('medium-mx'){
+        @include respond-to('medium-mx') {
             display: none;
         }
+		.dropdown {
+			display: inline-block;
+			position: relative;
+		}
+		.drop-input {
+			display: none;
+			+ {
+				.drop-menu {
+					display: none;
+				}
+			}
+			&:checked {
+				+ {
+					.drop-menu {
+						display: block;
+					}
+				}
+			}
+		}
+		.drop-menu {
+			position: absolute;
+			top: 100%;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 0;
+			width: 200px;
+			margin: 2px 0 0 0;
+			box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+			background-color: #fdfdfd;
+			z-index: 20;
+			li {
+				list-style-type: none;
+				padding: 10px 20px;
+				cursor: pointer;
+				white-space: nowrap;
+				a {
+					text-decoration: none;
+					color: $black;
+					display: block;
+					margin: -10px -20px;
+					padding: 10px 20px;
+					&:hover{
+						background-color: #fff;
+						border-radius: 5px;
+						border: 1px solid rgba(3, 27, 78, 0.1);
+						box-shadow: 0 2px 4px rgba(3, 27, 78, 0.06);
+						transform: scale(1.05);
+						transition: .3s ease;
+						color: $blue;
+					}
+				}
+			}
+			li.divider {
+				padding: 0;
+				border-bottom: 1px solid #cccccc;
+			}
+		}
     }
     .bdo_hamburger {
         margin-left: auto;
@@ -122,36 +180,36 @@
         background: none;
         outline: none;
         border: none;
-        @include respond-to('medium-mn'){
+        @include respond-to('medium-mn') {
             display: none;
         }
-        .bdo_bar, &:after, &:before {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 3px;
-          background-color: #FFF;
-          margin: 6px 0px;
-          transition: 0.4s;
+        .bdo_bar,
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #FFF;
+            margin: 6px 0px;
+            transition: 0.4s;
         }
-      }
-	
-	#cta_persona, #cta_empresa {
-		@include respond-to('medium-mx'){
+    }
+    #cta_persona,
+    #cta_empresa {
+        @include respond-to('medium-mx') {
             display: none !important;
         }
-	}  
-	
+    }
 }
-// Resposive
 
 // Resposive
 .movil-menu {
     position: fixed;
     width: 100%;
     height: 100vh;
-    top:0;
-    padding-top: 40px;
+    top: 0;
+    padding-top: 10px;
     background: $white;
     display: none;
     overflow-y: scroll;
@@ -159,28 +217,26 @@
     &-acces {
         display: flex;
         align-items: center;
-        height: 80px;
-        .logo{
+        height: 60px;
+        .logo {
             display: flex;
         }
-        .divider{
+        .divider {
             display: flex;
             width: 2px;
             height: 30px;
             background: $gray;
-            top: calc(80% / 2 );
+            top: calc(80% / 2);
             margin: 0 30px;
         }
-
-        a{
+        a {
             display: flex;
-             margin-left: auto;
-             text-decoration: none;
-             color: $blue;
-             font-size: 18px;
-             font-weight: 500;
-         }
-
+            margin-left: auto;
+            text-decoration: none;
+            color: $blue !important;
+            font-size: 18px;
+            font-weight: 500;
+        }
         .hamburger {
             margin-left: auto;
             position: relative;
@@ -191,58 +247,51 @@
             background: none;
             outline: none;
             border: none;
-            // @include respond-to('medium-mn'){
-            //     display: none;
-            // }
-            .bar, &:after, &:before {
-              content: '';
-              display: block;
-              width: 100%;
-              height: 3px;
-              background-color: $blue;
-              margin: 6px 0px;
-              transition: 0.4s;
+            .bar,
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $blue;
+                margin: 6px 0px;
+                transition: 0.4s;
             }
-            &:before{
+            &:before {
                 transform: rotate(-45deg) translate(-7px, 6px);
             }
-            &:after{
+            &:after {
                 transform: rotate(45deg) translate(-7px, -6px);
             }
             .bar {
                 opacity: 0;
-              }
+            }
         }
     }
-
-    &-cta{
+    &-cta {
         display: flex;
         margin: 0;
-
     }
-
     // DropDown
     .menu {
         position: relative;
         width: 100%;
-        height: auto;
         ul {
             width: 100%;
-            line-height: 30px;
             position: relative;
             li {
                 list-style: none;
-                display: inline-block;
+                // display: inline-block;
                 width: 100%;
-                text-align: center;
             }
         }
         &-link {
             display: flex;
             justify-content: space-between;
             cursor: pointer;
-            font:{
-                family: $font-regular;
+            font: {
+                font-family: $font-semibold;
                 size: 18px;
             }
             color: $blue-dark;
@@ -253,8 +302,8 @@
             transition: all 0.4s ease;
             position: relative;
             &:hover {
-                font-family: $font-semibold;
-                font-weight: 600;
+                // font-family: $font-semibold;
+                // font-weight: 600;
                 color: $blue;
             }
         }
@@ -262,180 +311,261 @@
         .dropdown {
             display: none;
             background: $white;
-            font-size: 14px;
-            li {
-                border-bottom: 1px solid #4b4a5e;
+            font-size: 16px;
+			padding: 10px 0;
+            .item {
+                // border-bottom: 1px solid #4b4a5e;
+				font-family: $font-regular;
+				padding: 10px;
+				a{
+					text-decoration: none;
+					color: $gray-medium;
+					&:hover {
+						color: $blue-dark;
+					}
+				}
             }
-            a {
-            display: block;
-            text-decoration: none;
-            color: #d9d9d9;
-            padding: 12px;
-            padding-left: 42px;
-            -webkit-transition: all 0.25s ease;
-            -o-transition: all 0.25s ease;
-            transition: all 0.25s ease;
-                &:hover {
-                    background: #b63b4d;
-                    color: #FFF;
-                }
-            }
-            .box {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                .item{
-                    flex: 2 2 100px;
-                    padding: 5px;
-                    margin: 5px;
-                    text-decoration: none;
-                    color: $blue;
-                    font-weight: 400;
-                }
-            }
-            .img {
-                width: 80px;
-                height: 82px;
-            }
+            // a {
+            //     display: block;
+            //     text-decoration: none;
+            //     color: #d9d9d9;
+            //     padding: 12px;
+            //     padding-left: 42px;
+            //     -webkit-transition: all 0.25s ease;
+            //     -o-transition: all 0.25s ease;
+            //     transition: all 0.25s ease;
+            //     &:hover {
+            //         color: #FFF;
+            //     }
+            // }
+            // .box {
+            //     // display: flex;
+            //     // flex-wrap: wrap;
+            //     // align-items: center;
+            //     .item {
+            //         padding: 5px;
+            //         margin: 5px;
+            //         text-decoration: none;
+            //         color: $blue;
+            //         font-weight: 400;
+            //     }
+            // }
+            // .img {
+            //     width: 80px;
+            //     height: 82px;
+            // }
         }
-        .open-dropdown{
+        .open-dropdown {
             display: block;
         }
     }
-
     // Mega Menu Movil
-    .bdo_menu_movil {
-        position: relative;
-        width: 100%;
-        height: auto;
-        ul {
-            width: 100%;
-            line-height: 30px;
-            position: relative;
-            li {
-                list-style: none;
-                display: inline-block;
-                width: 100%;
-                text-align: center;
-            }
-        }
-        .bdo_movil_link {
-            display: flex;
-            justify-content: space-between;
-            cursor: pointer;
-            font:{
-                family: $font-regular;
-                size: 18px;
-            }
-            color: $blue-dark;
-            letter-spacing: 0px;
-            margin: 15px 0 10px 0px;
-            padding: 10px;
-            border-bottom: 1px solid $gray;
-            transition: all 0.4s ease;
-            position: relative;
-            &:hover {
-                font-family: $font-semibold;
-                font-weight: 600;
-                color: $blue;
-            }
-        }
-        // Active dropdown
-        .bdo_sub_movil {
-            display: none;
-            background: $white;
-            font-size: 14px;
-            li {
-                border-bottom: 1px solid #4b4a5e;
-            }
-            a {
-            display: block;
-            text-decoration: none;
-            color: #d9d9d9;
-            padding: 12px;
-            padding-left: 42px;
-            -webkit-transition: all 0.25s ease;
-            -o-transition: all 0.25s ease;
-            transition: all 0.25s ease;
-                &:hover {
-                    background: #b63b4d;
-                    color: #FFF;
-                }
-            }
-            .bdo_box {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                &_item{
-                    flex: 2 2 100px;
-                    padding: 5px;
-                    margin: 5px;
-                    text-decoration: none;
-                    color: $blue;
-                    font-weight: 400;
-                }
-            }
-            .img-movil {
-                width: 80px;
-                height: 82px;
-            }
-        }
-        .open-dropdown{
-            display: block;
-        }
-    }
-
-
-
-    &-hide{
+    // .bdo_menu_movil {
+    //     position: relative;
+    //     width: 100%;
+    //     height: auto;
+    //     ul {
+    //         width: 100%;
+    //         line-height: 30px;
+    //         position: relative;
+    //         li {
+    //             list-style: none;
+    //             display: inline-block;
+    //             width: 100%;
+    //             text-align: center;
+    //         }
+    //     }
+    //     .bdo_movil_link {
+    //         display: flex;
+    //         justify-content: space-between;
+    //         cursor: pointer;
+    //         font: {
+    //             family: $font-regular;
+    //             size: 18px;
+    //         }
+    //         color: $blue-dark;
+    //         letter-spacing: 0px;
+    //         margin: 15px 0 10px 0px;
+    //         padding: 10px;
+    //         border-bottom: 1px solid $gray;
+    //         transition: all 0.4s ease;
+    //         position: relative;
+    //         &:hover {
+    //             font-family: $font-semibold;
+    //             font-w   // .bdo_menu_movil {
+    //     position: relative;
+    //     width: 100%;
+    //     height: auto;
+    //     ul {
+    //         width: 100%;
+    //         line-height: 30px;
+    //         position: relative;
+    //         li {
+    //             list-style: none;
+    //             display: inline-block;
+    //             width: 100%;
+    //             text-align: center;
+    //         }
+    //     }
+    //     .bdo_movil_link {
+    //         display: flex;
+    //         justify-content: space-between;
+    //         cursor: pointer;
+    //         font: {
+    //             family: $font-regular;
+    //             size: 18px;
+    //         }
+    //         color: $blue-dark;
+    //         letter-spacing: 0px;
+    //         margin: 15px 0 10px 0px;
+    //         padding: 10px;
+    //         border-bottom: 1px solid $gray;
+    //         transition: all 0.4s ease;
+    //         position: relative;
+    //         &:hover {
+    //             font-family: $font-semibold;
+    //             font-weight: 600;
+    //             color: $blue;
+    //         }
+    //     }
+    //     // Active dropdown
+    //     .bdo_sub_movil {
+    //         display: none;
+    //         background: $white;
+    //         font-size: 14px;
+    //         li {
+    //             border-bottom: 1px solid #4b4a5e;
+    //         }
+    //         a {
+    //             display: block;
+    //             text-decoration: none;
+    //             color: #d9d9d9;
+    //             padding: 12px;
+    //             padding-left: 42px;
+    //             -webkit-transition: all 0.25s ease;
+    //             -o-transition: all 0.25s ease;
+    //             transition: all 0.25s ease;
+    //             &:hover {
+    //                 background: #b63b4d;
+    //                 color: #FFF;
+    //             }
+    //         }
+    //         .bdo_box {
+    //             display: flex;
+    //             flex-wrap: wrap;
+    //             align-items: center;
+    //             &_item {
+    //                 flex: 2 2 100px;
+    //                 padding: 5px;
+    //                 margin: 5px;
+    //                 text-decoration: none;
+    //                 color: $blue;
+    //                 font-weight: 400;
+    //             }
+    //         }
+    //         .img-movil {
+    //             width: 80px;
+    //             height: 82px;
+    //         }
+    //     }
+    //     .open-dropdown {
+    //         display: block;
+    //     }
+    // }eight: 600;
+    //             color: $blue;
+    //         }
+    //     }
+    //     // Active dropdown
+    //     .bdo_sub_movil {
+    //         display: none;
+    //         background: $white;
+    //         font-size: 14px;
+    //         li {
+    //             border-bottom: 1px solid #4b4a5e;
+    //         }
+    //         a {
+    //             display: block;
+    //             text-decoration: none;
+    //             color: #d9d9d9;
+    //             padding: 12px;
+    //             padding-left: 42px;
+    //             -webkit-transition: all 0.25s ease;
+    //             -o-transition: all 0.25s ease;
+    //             transition: all 0.25s ease;
+    //             &:hover {
+    //                 background: #b63b4d;
+    //                 color: #FFF;
+    //             }
+    //         }
+    //         .bdo_box {
+    //             display: flex;
+    //             flex-wrap: wrap;
+    //             align-items: center;
+    //             &_item {
+    //                 flex: 2 2 100px;
+    //                 padding: 5px;
+    //                 margin: 5px;
+    //                 text-decoration: none;
+    //                 color: $blue;
+    //                 font-weight: 400;
+    //             }
+    //         }
+    //         .img-movil {
+    //             width: 80px;
+    //             height: 82px;
+    //         }
+    //     }
+    //     .open-dropdown {
+    //         display: block;
+    //     }
+    // }
+    &-hide {
         display: none;
-        @include respond-to("medium-mn"){
+        @include respond-to("medium-mn") {
             display: none;
         }
-
     }
-    &-show{
+    &-show {
         display: block;
-        @include respond-to("medium-mn"){
+        @include respond-to("medium-mn") {
             display: none;
         }
-
     }
 }
 
-.bg-empresa{
+.bg-empresa {
     background: $white;
-    background: linear-gradient(90deg, rgba($white,1) 10%, rgba($gray-dark,1) 10%, rgba($gray-dark,1) 100%);
+    background: linear-gradient(90deg, rgba($white, 1) 10%, rgba($gray-dark, 1) 10%, rgba($gray-dark, 1) 100%);
     transition: background-color 0.5s ease;
-    @include respond-to('medium-mx'){
+    @include respond-to('medium-mx') {
         background: $gray-dark;
-        background: linear-gradient(120deg, rgba($gray-dark,1) 10%, rgba($gray-dark,1) 100%);
+        background: linear-gradient(120deg, rgba($gray-dark, 1) 10%, rgba($gray-dark, 1) 100%);
         transition: background-color 0.5s ease;
     }
 }
 
-.bg-persona{
+.bg-persona {
     background: $white;
-    background: linear-gradient(90deg, rgba($white,1) 10%, rgba($blue,1) 10%, rgba($blue-dark,1) 100%);
+    background: linear-gradient(90deg, rgba($white, 1) 10%, rgba($blue, 1) 10%, rgba($blue-dark, 1) 100%);
     transition: background-color 0.5s ease;
-    @include respond-to('medium-mx'){
+    @include respond-to('medium-mx') {
         background: $blue;
-        background: linear-gradient(120deg, rgba(rgba($blue,1),1) 10%, rgba($blue-dark,1) 100%);
+        background: linear-gradient(120deg, rgba(rgba($blue, 1), 1) 10%, rgba($blue-dark, 1) 100%);
         transition: background-color 0.5s ease;
     }
 }
 
-
-.btn-movil{
+.btn-movil {
     padding: 25px;
     width: 100%;
     text-decoration: none;
     text-align: center;
-    
+	color: $white !important;
+    &:focus{
+        color: $white !important;
+
+    }
 }
-
-
-
 
 .bdo_mega_menu {
     display: flex;
@@ -447,75 +577,68 @@
     top: 122px;
     visibility: hidden;
     z-index: 3;
-    
-    @include respond-to ("medium-mx"){
+    @include respond-to ("medium-mx") {
         display: none;
     }
-  
     ul {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      line-height: 40px;
-      position: relative;
-      
-  
-      li {
-        display: inline-block;
-        margin: 0 2%;
-        a {
-          text-decoration: none;
-          color: $blue-dark;
-          font-family: $font-regular;
-          font-size: 16px;
-          letter-spacing: 0px;
-  
-          &:hover {
-            color: $blue !important;
-            font-family: $font-semibold;
-            font-weight: 600;
-          }
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 40px;
+        position: relative;
+        li {
+            display: inline-block;
+            margin: 0 2%;
+            a {
+                text-decoration: none;
+                color: $blue-dark;
+                font-family: $font-regular;
+                font-size: 16px;
+                letter-spacing: 0px;
+                &:hover {
+                    color: $blue !important;
+                    font-family: $font-semibold;
+                    font-weight: 600;
+                }
+            }
+            i {
+                color: $blue-dark;
+                font-weight: bold;
+                margin-left: 3px;
+            }
+            .bdo_submenu {
+                position: absolute;
+                background: #fefefe 0% 0% no-repeat padding-box;
+                box-shadow: 0px 8px 16px 0px rgba($black, 0.2);
+                left: 148px;
+                right: 83px;
+                top: 40px;
+                padding: 25px;
+                display: flex;
+                justify-content: space-around;
+                visibility: hidden;
+                line-height: 24px;
+                width: 83%;
+                height: auto;
+                border-radius: 4px;
+                @include respond-to ("x-large-mx") {
+                    left: 0;
+                    width: 100%;
+                    // height: auto;
+                }
+            }
+            &:hover .bdo_submenu {
+                visibility: visible;
+            }
+            .bdo_submenu .carousel_iconos-header img {
+                width: 100%;
+                display: block;
+                margin: auto;
+                max-width: 90px;
+            }
         }
-        i{
-            color: $blue-dark;
-            font-weight: bold;
-            margin-left: 3px;
-        }
-  
-        .bdo_submenu {
-          position: absolute;
-          background: #fefefe 0% 0% no-repeat padding-box;
-          box-shadow: 0px 8px 16px 0px rgba($black, 0.2);
-          left: 148px;
-          right: 83px;
-          top: 40px;
-          padding: 25px;
-          display: flex;
-          justify-content: space-around;
-          visibility: hidden;
-          line-height: 24px;
-          width: 83%;
-          height: auto;
-          border-radius: 4px;
-          @include respond-to ("large-mx"){
-            left: 65px;
-            height: auto;
-          }
-        }
-  
-        &:hover .bdo_submenu {
-          visibility: visible;
-        }
-  
-        .bdo_submenu .carousel_iconos-header img {
-          width: 100%;
-          display: block;
-          margin: auto;
-          max-width: 90px;
-        }
-      }
     }
-    .carousel_iconos-header::after  {
+    .carousel_iconos-header::after {
         position: absolute;
         content: ' ';
         width: 1px;
@@ -523,69 +646,75 @@
         background: #ADBAE6;
         top: 30%;
         right: 0;
-        &:first-child(){
+        &:first-child() {
             width: 0px;
-        height: 34%;
+            height: 34%;
         }
-      }
-      .img-responsive{
-		  width: 90px;
-		  height: 90px;
-	  }
-      .bdo_submenu .titulo-item {
+    }
+    .img-responsive {
+        width: 90px;
+        height: 90px;
+    }
+    .bdo_submenu .titulo-item {
         margin-top: 10px;
         font-size: 16px;
         color: #606060;
         text-align: center;
-        font: normal normal bold 18px/18px Gelion;
-      }
-      
-      .titulo-item:hover {
+		font-size: 16px;
+        font-family: $font-medium;
+		font-family: 600;
+        text-decoration: none;
+    }
+    .titulo-item:hover {
         color: $blue;
-      }
-      
-      .description {
+    }
+    .description {
         margin-top: 5px;
         text-align: center;
-        color: darken($gray,10%);
+        color: $gray-medium;
         font-weight: 300;
-      }
-      
-      .owl-carousel {
+    }
+    .owl-carousel {
         height: auto;
-        padding: 10px 0;
-      
-        .owl-nav button {
-          &.owl-prev {
-            .i-prev{
-                font-size: 40px !important;
-                position: absolute !important;
-                bottom: 55px !important;
-                left: 0 !important;
-            }
-          }
-          &.owl-next  {
-              .i-next{
-                  font-size: 40px !important;
-                  position: absolute !important;
-                  bottom: 55px !important;
-                  right: 0 !important;
-            }
-          }
+        padding: 10px 0; 
+    }
+	.i-prev {
+		position: absolute !important;
+		left: 0 !important;
+		font-weight: normal !important;
+		font-size: 40px !important;
+		bottom: 43% !important;
+	}
+
+	.i-next {
+		position: absolute !important;
+		right: 0 !important;
+		font-size: 40px !important;
+		bottom: 43% !important;
+	}
+    
+    .segmentos {
+        display: flex;
+        .iconos-segmentos {
+            width: 100%;
+            margin: 0 55px;
+            max-width: 90px;
         }
-      
-      }
-  }
-  
+    }
+}
+
 .mega_hide {
     visibility: hidden !important;
 }
+
 .mega_show {
     visibility: visible !important;
 }
-.e-hide{
-	display: none !important;
+
+.e-hide {
+    display: none !important;
 }
-.e-show{
-	display: block;
+
+.e-show {
+    display: block;
 }

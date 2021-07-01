@@ -1,0 +1,95 @@
+$color-diamond: #C6ED8D;
+$color-ribbon: #7DE3C8;
+$color-arrow: #8D96ED;
+$color-rounded: #FC9E86;
+$color-sheer: #85C9ED;
+
+aside {
+  line-height: 34px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    top: -1px;
+  }
+  &:active {
+    top: 1px;
+  }
+  &.diamond {
+    background-color: $color-diamond;
+    &:after, &:before {
+      border-color: transparent $color-diamond;
+    }
+    &:before {
+      left: -17px;
+      border-width: 17px 17px 17px 0;
+    }
+    &:after {
+      right: -17px;
+      border-width: 17px 0 17px 17px;
+    }
+  }
+  &.ribbon {
+    background-color: $color-ribbon;
+    $color-ribbon: darken($color-ribbon, 10);
+    &:before, &:after {
+      top: 5px;
+      z-index: -10;
+    }
+    &:before {
+      border-color: $color-ribbon $color-ribbon $color-ribbon transparent;
+      left: -25px;
+      border-width: 17px;
+    }
+    &:after {
+      border-color: $color-ribbon transparent $color-ribbon $color-ribbon;
+      right: -25px;
+      border-width: 17px;
+    }
+  }
+  &.arrow {
+    background-color: $color-arrow;
+    &:after, &:before {
+      border-width: 17px 0 17px 17px;
+    }
+    &:before {
+      border-color: $color-arrow transparent;
+      left: -17px;
+    }
+    &:after {
+      border-color: transparent $color-arrow;
+      right: -17px;
+    }
+  }
+  &.rounded {
+    background-color: $color-rounded;
+    border-radius: 25px / 17px;
+    left: -20px;
+    width: 200px;
+  }
+  &.sheer {
+    background-color: $color-sheer;
+    left: -21px;
+    width: 170px;
+    &:after, &:before {
+      border-width: 33px 10px 0 0;
+    }
+    &:before {
+      left: -10px;
+      border-color: transparent $color-sheer;
+    }
+    &:after {
+      right: -10px;
+      border-color: $color-sheer transparent;
+    }
+  }
+}
+
+aside:before, aside:after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 0;
+}

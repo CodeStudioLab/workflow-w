@@ -2,7 +2,27 @@
     display: flex;
     font-family: $font-regular;
     background: $white;
-   
+    padding: 5px 0;
+    @include respond-to('small-mx'){
+        display: none;
+    }
+    &-left{
+        display: flex;
+        @include respond-to('small-mx'){
+            display: none;
+        }
+    }
+
+    &-right{
+        display: flex;
+        margin-left: auto;
+        @include respond-to('small-mx'){
+            width: 100%;
+            margin-left: 20px;
+        }
+    }
+
+
     &_access{
         display: flex;
     }
@@ -17,29 +37,46 @@
         border-radius: $rounded;
         color: $blue;
     }
-    &_group{
-        display: flex;
-        margin-left: auto;
-    }
+
+
 
     .icon-access{
         padding: 3px;
+        margin-right: 5px;
         width: 28px;
         height: 28px;
         border: 1px solid $gray;
         border-radius: $rounded;
         opacity: 1;
     }
-  
+	.icon-adjust{
+		&:active{
+			color: $blue-dark;
+		}
+		&:hover{
+			color: $blue-dark;
+		}
+	}
+	.icon-superscript2{
+		&:active{
+			color: $blue-dark;
+		}
+	}
+	.icon-subscript2{
+		&:active{
+			color: $blue-dark;
+		}
+	}
     .bdo_utilitybar_item{
         display: flex;
         align-items: center;
         justify-content: start;
         font-family: $font-regular;
-        padding: 5px;
+        // padding: 5px 0;
 		color: $gray;
+
         &-active{
-            background: $gray;
+            background: $blue;
             @include respond-to('small-mx'){
                 background: transparent;
             }
@@ -54,6 +91,9 @@
             font-size: 16px;
             padding: 0 5px;
 			color: darken($gray,50%);
+			&:hover{
+				color: $blue !important;
+			}
             @include respond-to('small-mx'){
                 padding: 0;
             }

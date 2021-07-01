@@ -1,5 +1,5 @@
 .indicadores{
-	width: 100%;
+	width: 87%;
     margin: auto;
 	height: auto;
 	display: flex;
@@ -9,8 +9,10 @@
 	display: -webkit-flex;
 	flex-direction: row;
 	justify-content: space-around;
+	background: $ligth-blue;
 	padding: 10px 0;
-	background: $ligth-blue 0% 0% no-repeat padding-box;
+	border-radius: 6px;
+	
     @include respond-to("small-mx"){
 		height: auto;
 		padding: 20px 0;		
@@ -42,7 +44,8 @@
 		}
 		span{
 			color:$blue;
-			font: normal normal bold 17px/23px Gelion;
+			font-size: 16px;
+			font-family: $font-bold;
 			@include respond-to("small-mx"){	
 				width: 35px;		
 			}

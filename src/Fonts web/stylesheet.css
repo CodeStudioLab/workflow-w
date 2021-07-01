@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Gelion';
+    src: url('Gelion-Bold.eot');
+    src: url('Gelion-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Gelion-Bold.woff2') format('woff2'),
+        url('Gelion-Bold.woff') format('woff'),
+        url('Gelion-Bold.ttf') format('truetype'),
+        url('Gelion-Bold.svg#Gelion-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('Gelion-Black.eot');
+    src: url('Gelion-Black.eot?#iefix') format('embedded-opentype'),
+        url('Gelion-Black.woff2') format('woff2'),
+        url('Gelion-Black.woff') format('woff'),
+        url('Gelion-Black.ttf') format('truetype'),
+        url('Gelion-Black.svg#Gelion-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('Gelion-Light.eot');
+    src: url('Gelion-Light.eot?#iefix') format('embedded-opentype'),
+        url('Gelion-Light.woff2') format('woff2'),
+        url('Gelion-Light.woff') format('woff'),
+        url('Gelion-Light.ttf') format('truetype'),
+        url('Gelion-Light.svg#Gelion-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion Semi';
+    src: url('Gelion-SemiBold.eot');
+    src: url('Gelion-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Gelion-SemiBold.woff2') format('woff2'),
+        url('Gelion-SemiBold.woff') format('woff'),
+        url('Gelion-SemiBold.ttf') format('truetype'),
+        url('Gelion-SemiBold.svg#Gelion-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('Gelion-Thin.eot');
+    src: url('Gelion-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Gelion-Thin.woff2') format('woff2'),
+        url('Gelion-Thin.woff') format('woff'),
+        url('Gelion-Thin.ttf') format('truetype'),
+        url('Gelion-Thin.svg#Gelion-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('Gelion-Regular.eot');
+    src: url('Gelion-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Gelion-Regular.woff2') format('woff2'),
+        url('Gelion-Regular.woff') format('woff'),
+        url('Gelion-Regular.ttf') format('truetype'),
+        url('Gelion-Regular.svg#Gelion-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelion';
+    src: url('Gelion-Medium.eot');
+    src: url('Gelion-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Gelion-Medium.woff2') format('woff2'),
+        url('Gelion-Medium.woff') format('woff'),
+        url('Gelion-Medium.ttf') format('truetype'),
+        url('Gelion-Medium.svg#Gelion-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1{
+    font-family: "Gelion", sans-serif;
+    font-weight: 900;
+}
